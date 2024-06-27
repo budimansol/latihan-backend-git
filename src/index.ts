@@ -36,6 +36,7 @@ app.get('/products', (req: Request, res: Response) => {
     res.send('List of products');
 });
 
+
 // Endpoint untuk membuat order
 app.post('/orders', (req: Request, res: Response) => {
     const { productId, quantity } = req.body;
@@ -48,3 +49,17 @@ app.get('/orders', (req: Request, res: Response) => {
     // Logika untuk mendapatkan semua order
     res.send('List of orders');
 });
+
+// Endpoint untuk menambah produk
+app.post('/products', (req: Request, res: Response) => {
+    const { name, price } = req.body;
+    // Logika untuk menambah produk
+    res.send('Product added');
+});
+
+// Endpoint untuk mendapatkan semua produk
+app.get('/products', (req: Request, res: Response) => {
+    // Logika untuk mendapatkan semua produk
+    res.send('List of products');
+});
+
